@@ -1,7 +1,7 @@
-import { readFileSync } from "node:fs";
-import { resolve } from "node:path";
 import tailwindcss from "@tailwindcss/vite";
 import react from "@vitejs/plugin-react-swc";
+import { readFileSync } from "node:fs";
+import { resolve } from "node:path";
 import { defineConfig, type PluginOption } from "vite";
 import { analyzer } from "vite-bundle-analyzer";
 import { VitePWA } from "vite-plugin-pwa";
@@ -41,6 +41,7 @@ if (shouldAnalyze) {
 
 // https://vite.dev/config/
 export default defineConfig({
+    base:'/Cent/',
     define: {
         __BUILD_INFO: { version: `${packageValue.version}` },
     },
